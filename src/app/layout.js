@@ -1,5 +1,6 @@
 import './globals.css'
 import { FontProvider } from './components/fontProvider'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Flying Legend Vietnam - Coming Soon',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <FontProvider>{children}</FontProvider>
+        <Analytics />
       </body>
     </html>
   )
