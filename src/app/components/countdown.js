@@ -32,15 +32,13 @@ export function Countdown({ targetDate }) {
   }, [targetDate])
 
   return (
-    <div className="text-center">
-      <div className="flex justify-center space-x-4">
-        {Object.entries(timeLeft).map(([unit, value]) => (
-          <div key={unit} className="flex flex-col items-center">
-            <span className="text-4xl md:text-6xl font-bold">{value}</span>
-            <span className="text-sm md:text-base uppercase">{unit}</span>
-          </div>
-        ))}
-      </div>
+    <div className="flex justify-center space-x-4 text-white">
+      {Object.entries(timeLeft).map(([unit, value]) => (
+        <div key={unit} className="flex flex-col items-center">
+          <span className="text-2xl font-bold md:text-3xl">{value}</span>
+          <span className="text-sm uppercase md:text-base">{unit}</span>
+        </div>
+      ))}
     </div>
   )
 }

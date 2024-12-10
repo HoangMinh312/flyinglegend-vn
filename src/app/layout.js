@@ -1,30 +1,24 @@
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import './globals.css'
+import { FontProvider } from './components/fontProvider'
 
 export const metadata = {
-  title: "Flying Legend Vietnam",
-  description: "Flying Legend Vietnam Description",
-};
+  title: 'Flying Legend Vietnam - Coming Soon',
+  description: 'Flying Legend Vietnam - Under Construction',
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="vi">
+      <head>
+        <link
+          href="https://fonts.cdnfonts.com/css/bank-gothic"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <FontProvider>{children}</FontProvider>
       </body>
     </html>
-  );
+  )
 }
+
