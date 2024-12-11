@@ -15,7 +15,6 @@ export default function ComingSoonPage() {
               cùng đất nước
             </h1>
           </div>
-
           <Image
             src="/flyinglegend-logo.png"
             alt="Flying Legend Logo"

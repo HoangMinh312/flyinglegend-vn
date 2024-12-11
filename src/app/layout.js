@@ -1,11 +1,13 @@
-import './globals.css'
-import { FontProvider } from './components/fontProvider'
-import { Analytics } from "@vercel/analytics/react"
+import "./globals.css";
+import { FontProvider } from "./components/fontProvider";
+import { Analytics } from "@vercel/analytics/react";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export const metadata = {
-  title: 'Flying Legend Vietnam - Coming Soon',
-  description: 'Flying Legend Vietnam - Under Construction',
-}
+  title: "Flying Legend Vietnam - Coming Soon",
+  description: "Flying Legend Vietnam - Under Construction",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -17,10 +19,15 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <FontProvider>{children}</FontProvider>
+        <FontProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </FontProvider>
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
-
