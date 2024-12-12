@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="vi">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           href="https://fonts.cdnfonts.com/css/bank-gothic"
           rel="stylesheet"

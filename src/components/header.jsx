@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Header() {
@@ -23,86 +23,51 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 bg-[#0675E1] ${
-        isScrolled ? ' shadow-md' : ''
-      }`}>
-      <div className="container mx-auto flex items-center justify-between px-4 py-6">
-        <Link href="/" className="text-2xl font-bold text-white">
+    <header
+      className={`flex sticky top-0 z-50 transition-all duration-500 ease-in-out bg-[#0675E1] ${
+        isScrolled ? " shadow-md h-26" : "h-40"
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between transition-all duration-500 ease-in-out px-4 py-6">
+        <Link href="/">
           <Image
             src="/flyinglegend-logo.png"
             alt="Flying Legend Vietnam"
-            width={150}
-            height={150}
-            
+            width={isScrolled ? 80 : 150}
+            height={isScrolled ? 80 : 150}
+            className="transition-all duration-300 ease-in-out"
           />
         </Link>
         <nav>
           <ul className="flex space-x-4">
             <li>
               <Button variant="link" asChild>
-                <Link href="/" className="text-white hover:text-gray-200">
-                  Military
+                <Link href="/products" className="text-white hover:text-gray-200">
+                  Sản Phẩm
                 </Link>
               </Button>
             </li>
             <li>
               <Button variant="link" asChild>
-                <Link href="/about" className="text-white hover:text-gray-200">
-                  Aircraft
+                <Link href="/order" className="text-white hover:text-gray-200">
+                  Đặt Hàng
                 </Link>
               </Button>
             </li>
             <li>
               <Button variant="link" asChild>
-                <Link
-                  href="/contact"
-                  className="text-white hover:text-gray-200"
-                >
-                  Our kits
-                </Link>
-              </Button>
-            </li>
-            <li>
-              <Button variant="link" asChild>
-                <Link href="/" className="text-white hover:text-gray-200">
-                  Download
-                </Link>
-              </Button>
-            </li>
-            <li>
-              <Button variant="link" asChild>
-                <Link href="/about" className="text-white hover:text-gray-200">
-                  Order a kit
+                <Link href="/press" className="text-white hover:text-gray-200">
+                  Tin Tức
                 </Link>
               </Button>
             </li>
             <li>
               <Button variant="link" asChild>
                 <Link
-                  href="/contact"
+                  href="/about-us"
                   className="text-white hover:text-gray-200"
                 >
-                  Press
-                </Link>
-              </Button>
-            </li>
-            <li>
-              <Button variant="link" asChild>
-                <Link
-                  href="/contact"
-                  className="text-white hover:text-gray-200"
-                >
-                  Get in touch
-                </Link>
-              </Button>
-            </li>
-            <li>
-              <Button variant="link" asChild>
-                <Link
-                  href="/contact"
-                  className="text-white hover:text-gray-200"
-                >
-                  Reserved area
+                  Về Công Ty
                 </Link>
               </Button>
             </li>
