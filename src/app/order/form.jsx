@@ -21,23 +21,23 @@ import { Textarea } from "@/components/ui/textarea"; // Assuming Textarea compon
 const formSchema = z.object({
   name: z
     .string()
-    .nonempty("Name is required.")
-    .min(2, { message: "Name must be at least 2 characters long." })
-    .max(100, { message: "Name cannot exceed 100 characters." }),
+    .nonempty("Tên là bắt buộc.")
+    .min(2, { message: "Tên phải có ít nhất 2 ký tự." })
+    .max(100, { message: "Tên không được vượt quá 100 ký tự." }),
   email: z
     .string()
-    .email({ message: "Please enter a valid email address." })
-    .nonempty("Email is required."),
+    .email({ message: "Vui lòng nhập địa chỉ email hợp lệ." })
+    .nonempty("Email là bắt buộc."),
   subject: z
     .string()
-    .nonempty("Subject is required.")
-    .min(2, { message: "Subject must be at least 2 characters long." })
-    .max(100, { message: "Subject cannot exceed 100 characters." }),
+    .nonempty("Chủ đề là bắt buộc.")
+    .min(2, { message: "Chủ đề phải có ít nhất 2 ký tự." })
+    .max(100, { message: "Chủ đề không được vượt quá 100 ký tự." }),
   message: z
     .string()
-    .nonempty("Message is required.")
-    .min(10, { message: "Message must be at least 10 characters long." })
-    .max(500, { message: "Message cannot exceed 500 characters." }),
+    .nonempty("Nội dung là bắt buộc.")
+    .min(10, { message: "Nội dung phải có ít nhất 10 ký tự." })
+    .max(500, { message: "Nội dung không được vượt quá 500 ký tự." }),
 });
 
 export function ProfileForm() {
@@ -71,11 +71,11 @@ export function ProfileForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Name</FormLabel>
+              <FormLabel>Tên của bạn</FormLabel>
               <FormControl>
-                <Input placeholder="Type your name here..." {...field} />
+                <Input placeholder="Nhập tên của bạn..." {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
+              <FormDescription>Đây sẽ là tên hiển thị công khai của bạn.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -85,11 +85,11 @@ export function ProfileForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel>Địa chỉ email</FormLabel>
               <FormControl>
-                <Input placeholder="Type your email here..." {...field} />
+                <Input placeholder="Nhập email của bạn..." {...field} />
               </FormControl>
-              <FormDescription>We'll never share your email with anyone else.</FormDescription>
+              <FormDescription>Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai khác.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -99,11 +99,11 @@ export function ProfileForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Chủ đề</FormLabel>
               <FormControl>
-                <Input placeholder="Type your subject here..." {...field} />
+                <Input placeholder="Nhập chủ đề của bạn..." {...field} />
               </FormControl>
-              <FormDescription>The subject of your message.</FormDescription>
+              <FormDescription>Chủ đề của tin nhắn bạn muốn gửi.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -113,21 +113,21 @@ export function ProfileForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Nội dung</FormLabel>
               <FormControl>
                 <Textarea
                   rows={4}
-                  placeholder="Type your message here..."
+                  placeholder="Nhập nội dung của bạn..."
                   {...field}
                 />
               </FormControl>
-              <FormDescription>Your message should be clear and concise.</FormDescription>
+              <FormDescription>Nội dung nên rõ ràng và súc tích.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Submit"}
+          {isSubmitting ? "Đang gửi..." : "Gửi"}
         </Button>
       </form>
     </Form>
