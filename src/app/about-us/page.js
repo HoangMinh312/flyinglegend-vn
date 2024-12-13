@@ -19,7 +19,7 @@ export default function AboutUs() {
         backgroundImage="/sky-background.svg"
       />
       <div className="container mx-auto px-4 py-16 flex-col gap-6">
-        <h2 className="my-8 text-4xl font-bold">Câu Chuyện Flying Legend Việt Nam</h2>
+        <h2 className="my-8 text-4xl font-bold">Câu Chuyện Flying Legend Vietnam</h2>
 
         <section className="my-8">
           <h3 className="text-2xl font-semibold mb-4">Tầm Nhìn</h3>
@@ -33,7 +33,7 @@ export default function AboutUs() {
           <figure>
             <Image src={photo2} alt="Flying Legend Vietnam founders shaking hands" />
             <figcaption className="text-center mt-2 text-sm italic">
-                Ông Trần Hải Đăng, người sáng lập Flying Legend Vietnam, cùng đồng sáng lập viên khác.
+                Ông Trần Hải Đăng, người sáng lập Flying Legend Vietnam, cùng đồng sáng lập viên Francesco Rummolino.
             </figcaption>
           </figure>
         </section>
