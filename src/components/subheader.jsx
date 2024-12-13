@@ -27,16 +27,16 @@ export function SubHeader({ title, breadcrumbs, backgroundImage }) {
           <BreadcrumbList>
             {breadcrumbs.map((item, index) =>
               index < breadcrumbs.length - 1 ? (
-                <>
+                <React.Fragment key={index}>
                   <BreadcrumbItem>
                     <BreadcrumbLink href={item.href}>
                       {item.label}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
-                </>
+                </React.Fragment>
               ) : (
-                <BreadcrumbItem>
+                <BreadcrumbItem key={index}>
                   <BreadcrumbPage>{item.label}</BreadcrumbPage>
                 </BreadcrumbItem>
               )
