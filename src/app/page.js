@@ -4,6 +4,7 @@ import ComingSoonPage from "./components/comingSoonPage";
 import { VideoHero } from "./components/videoHero";
 import CompanyIntro from "./components/companyIntro";
 import GalleryCarousel from "./components/galleryCarousel";
+import NewsCarousel from "./components/newsCarousel";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       {/* Picture Gallery */}
       <GalleryCarousel />
       {/* News */}
+      <NewsCarousel />
     </main>
   );
 }

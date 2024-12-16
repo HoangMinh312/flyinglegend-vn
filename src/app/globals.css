@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Gallery Carousel CSS */
+
 .embla {
   max-width: 48rem;
   margin: auto;
@@ -36,6 +39,48 @@
   height: 100%;
   user-select: none;
 }
+
+/* NEWS CAROUSEL CSS */
+
+.embla_news {
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  --slide-height: 19rem;
+  padding: 1.6rem;
+}
+
+.embla__container_news {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide_news {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .embla_news {
+    --slide-size: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .embla_news {
+    --slide-size: 33.33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .embla_news {
+    --slide-size: 25%;
+  }
+}
+
 
 
 :root {

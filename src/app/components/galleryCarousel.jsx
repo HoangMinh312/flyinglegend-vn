@@ -9,9 +9,10 @@ import pic5 from "./(assets)/pic5.jpg";
 import pic6 from "./(assets)/pic6.jpg";
 import pic7 from "./(assets)/pic7.jpg";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 const images = [
   { src: pic1, alt: "Picture 1" },
@@ -36,6 +37,9 @@ export default function GalleryCarousel() {
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+
   useEffect(() => {
     if (!emblaApi) return;
 
@@ -57,7 +61,16 @@ export default function GalleryCarousel() {
   return (
     <section className="flex flex-col lg:flex-row max-w-screen-sm lg:max-w-screen-xl md:h-auto mx-4 md:mx-auto items-center mb-4 lg:mb-8">
       {/* Vertical Carousel */}
-      <div className="embla w-full lg:w-1/4">
+      <div className="embla w-full lg:w-1/4 relative">
+        {/* Top Navigation Button */}
+        <button
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200 transition-colors duration-200 mb-2"
+          onClick={scrollPrev}
+          aria-label="Previous image"
+        >
+          <ChevronUp className="w-6 h-6" />
+        </button>
+
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container flex lg:flex-col gap-4">
             {images.map((image, index) => (
@@ -76,6 +89,15 @@ export default function GalleryCarousel() {
             ))}
           </div>
         </div>
+
+        {/* Bottom Navigation Button */}
+        <button
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200 transition-colors duration-200 mt-2"
+          onClick={scrollNext}
+          aria-label="Next image"
+        >
+          <ChevronDown className="w-6 h-6" />
+        </button>
       </div>
 
       {/* Selected Image */}
@@ -92,3 +114,4 @@ export default function GalleryCarousel() {
     </section>
   );
 }
+
