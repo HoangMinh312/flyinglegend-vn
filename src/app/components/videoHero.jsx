@@ -5,31 +5,42 @@ import { Button } from "@/components/ui/button"
 import { Play, Pause, Volume2, VolumeX } from 'lucide-react'
 
 export function VideoHero({ videoId }) {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(true) // Default to playing
+  const [isMuted, setIsMuted] = useState(true) // Default to muted
 
   useEffect(() => {
-    const player = document.getElementById('youtube-player')
-    window.onYouTubeIframeAPIReady = () => {
-      new window.YT.Player('youtube-player', {
-        events: {
-          onReady: (event) => {
-            event.target.mute()
-            if (isPlaying) event.target.playVideo()
-          },
-        },
-      })
-    }
-
     const tag = document.createElement('script')
     tag.src = "https://www.youtube.com/iframe_api"
     const firstScriptTag = document.getElementsByTagName('script')[0]
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
+    window.onYouTubeIframeAPIReady = () => {
+      new window.YT.Player('youtube-player', {
+        events: {
+          onReady: (event) => {
+            event.target.mute() // Ensure video is muted
+            event.target.playVideo() // Start playing
+          },
+        },
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          loop: 1,
+          playlist: videoId,
+        },
+      })
+    }
+
     return () => {
       window.onYouTubeIframeAPIReady = null
     }
-  }, [isPlaying])
+  }, [videoId])
 
   const togglePlay = () => {
     const player = document.getElementById('youtube-player')
@@ -52,15 +63,15 @@ export function VideoHero({ videoId }) {
   }
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      <iframe
-        id="youtube-player"
-        className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-screen min-w-[177.77vw] -translate-x-1/2 -translate-y-1/2 w-screen"
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&rel=0&loop=1&playlist=${videoId}&enablejsapi=1&vq=720`}
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      ></iframe>
+    <div className="relative min-h-[300px] md:h-96 lg:h-screen w-full overflow-hidden">
+      <div className="absolute inset-0">
+        <iframe
+          id="youtube-player"
+          className="h-full w-full object-cover"
+          src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&mute=1&controls=0&vq=hd720&loop=1&playlist=${videoId}`}
+        ></iframe>
+      </div>
+      <div className="absolute inset-0 pointer-events-none"></div>
       <div className="absolute bottom-4 left-4 z-10 flex space-x-2">
         <Button variant="secondary" size="icon" onClick={togglePlay}>
           {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
@@ -72,4 +83,3 @@ export function VideoHero({ videoId }) {
     </div>
   )
 }
-

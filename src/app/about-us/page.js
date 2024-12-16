@@ -16,7 +16,7 @@ export default function AboutUs() {
           { label: "Trang chủ", href: "/" },
           { label: "Hành Trình Của Chúng Tôi", href: "/about" },
         ]}
-        backgroundImage="/sky-background.svg"
+        backgroundImage="/subheader-pic1.jpg"
       />
       <div className="container mx-auto px-4 py-16 flex-col gap-6">
         <h2 className="my-8 text-4xl font-bold">Câu Chuyện Flying Legend Vietnam</h2>

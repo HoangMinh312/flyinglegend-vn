@@ -9,7 +9,7 @@ export default function PressPage() {
                     { label: "Trang Chủ", href: "/" },
                     { label: "Tin Tức", href: "/press" },
                 ]}
-                backgroundImage="/sky-background.svg"
+                backgroundImage="/subheader-pic1.jpg"
             />
             <div className="container mx-auto px-4 py-16">
                 <h2 className="mb-8 text-3xl font-bold">Press</h2>

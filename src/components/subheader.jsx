@@ -20,6 +20,7 @@ export function SubHeader({ title, breadcrumbs, backgroundImage }) {
         className="object-cover"
         priority
       />
+      <div className="absolute inset-0 bg-black bg-opacity-60" /> {/* Dark overlay */}
       <div className="relative z-10 flex h-full flex-col items-center lg:items-start justify-center px-4">
         <h1 className="mb-4 text-2xl sm:text-4xl font-bold text-white text-center lg:text-left lg:pl-2">
           {title}
@@ -30,7 +31,7 @@ export function SubHeader({ title, breadcrumbs, backgroundImage }) {
               index < breadcrumbs.length - 1 ? (
                 <React.Fragment key={index}>
                   <BreadcrumbItem>
-                    <BreadcrumbLink href={item.href}>
+                    <BreadcrumbLink href={item.href} className="text-white hover:text-gray-500">
                       {item.label}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
@@ -38,7 +39,7 @@ export function SubHeader({ title, breadcrumbs, backgroundImage }) {
                 </React.Fragment>
               ) : (
                 <BreadcrumbItem key={index}>
-                  <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                  <BreadcrumbPage className="text-white">{item.label}</BreadcrumbPage>
                 </BreadcrumbItem>
               )
             )}

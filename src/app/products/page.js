@@ -9,7 +9,7 @@ export default function Products() {
           { label: "Trang Chủ", href: "/" },
           { label: "Sản Phẩm", href: "/products" },
         ]}
-        backgroundImage="/sky-background.svg"
+        backgroundImage="/subheader-pic2.jpg"
       />
       <div className="container mx-auto px-4 py-16">
         <h2 className="mb-8 text-3xl font-bold">Sản Phẩm</h2>

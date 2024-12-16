@@ -73,17 +73,17 @@ export default function Header() {
                   href="/products"
                   className="text-white hover:text-gray-200"
                 >
-                  Sản Phẩm
+                  TP-150
                 </Link>
               </Button>
             </li>
-            <li>
+            {/* <li>
               <Button variant="link" asChild>
                 <Link href="/order" className="text-white hover:text-gray-200">
                   Đặt Hàng
                 </Link>
               </Button>
-            </li>
+            </li> */}
             <li>
               <Button variant="link" asChild>
                 <Link href="/press" className="text-white hover:text-gray-200">
@@ -142,10 +142,10 @@ export default function Header() {
                 href="/products"
                 className="block text-[#232325] hover:text-gray-600"
               >
-                Sản Phẩm
+                TP-150
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 onClick={toggleMenu}
                 href="/order"
@@ -153,7 +153,7 @@ export default function Header() {
               >
                 Đặt Hàng
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 onClick={toggleMenu}
