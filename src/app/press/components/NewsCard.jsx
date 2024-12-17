@@ -15,7 +15,7 @@ export default function NewsCard({ title, date, excerpt, image, link }) {
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-sm text-gray-500 mb-4">{date}</p>
         <p className="text-gray-700">{excerpt}</p>
-        <Link href={link}>
+        <Link href={link} target="_blank" rel="noopener noreferrer">
           <span className="text-blue-600 hover:underline mt-2 block">Xem thêm →</span>
         </Link>
       </div>
