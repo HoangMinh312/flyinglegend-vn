@@ -70,7 +70,7 @@ export default function Header() {
             <li>
               <Button variant="link" asChild>
                 <Link
-                  href="/products"
+                  href="/tp-150"
                   className="text-white hover:text-gray-200"
                 >
                   TP-150
@@ -139,7 +139,7 @@ export default function Header() {
             <li>
               <Link
                 onClick={toggleMenu}
-                href="/products"
+                href="/tp-150"
                 className="block text-[#232325] hover:text-gray-600"
               >
                 TP-150

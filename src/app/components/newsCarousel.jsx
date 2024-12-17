@@ -5,7 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import pic1 from "./(assets)/pic1.jpg";
+import pic1 from "../press/(assets)/news1.png";
 import pic2 from "./(assets)/pic2.jpg";
 import pic3 from "./(assets)/pic3.jpg";
 import pic4 from "./(assets)/pic4.jpg";
@@ -15,44 +15,15 @@ import pic6 from "./(assets)/pic6.jpg";
 const newsData = [
   {
     id: 1,
-    title: "Breaking News 1",
-    date: "Dec 15, 2024",
+    title: "Khám phá máy bay ‘Make in Vietnam’ tại Triển lãm Quốc phòng 2024",
+    date: "17 Tháng 12, 2024",
     image: pic1,
-  },
-  {
-    id: 2,
-    title: "Breaking News 2",
-    date: "Dec 14, 2024",
-    image: pic2,
-  },
-  {
-    id: 3,
-    title: "Breaking News 3",
-    date: "Dec 13, 2024",
-    image: pic3,
-  },
-  {
-    id: 4,
-    title: "Breaking News 4",
-    date: "Dec 12, 2024",
-    image: pic4,
-  },
-  {
-    id: 5,
-    title: "Breaking News 5",
-    date: "Dec 11, 2024",
-    image: pic5,
-  },
-  {
-    id: 6,
-    title: "Breaking News 6",
-    date: "Dec 10, 2024",
-    image: pic6,
+    link: "https://vietnamnet.vn/kham-pha-may-bay-make-in-vietnam-tai-trien-lam-quoc-phong-2024-2353123.html",
   },
 ];
 
 export default function NewsCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true});
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
@@ -103,7 +74,7 @@ export default function NewsCarousel() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold">{news.title}</h3>
+                  <h3 className="text-lg font-semibold"><a href={news.link} target="_blank" rel="noopener noreferrer">{news.title}</a></h3>
                   <p className="text-sm text-gray-500">{news.date}</p>
                 </div>
               </div>

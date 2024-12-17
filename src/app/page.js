@@ -9,7 +9,7 @@ import NewsCarousel from "./components/newsCarousel";
 export default function Home() {
   return (
     <main className="flex-col min-h-screen items-center justify-start gap-0">
-      <VideoHero videoId={"Ta-gQIgKvc0"}/>
+      <VideoHero videoId={"eJopS3T8o30"}/>
       {/* Company Intro */}
       <CompanyIntro />
       {/* Picture Gallery */}
