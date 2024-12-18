@@ -21,7 +21,7 @@ export default function CompanyIntro() {
         </div>
       </div>
       <div className="relative px-4 lg:px-10 sm:px-6 mx-auto max-w-screen-xl w-full mt-4 lg:mt-10">
-        <p className="text-justify text-sm md:text-lg">
+        <p className="text-justify text-lg">
           Flying Legend Vietnam tự hào là công ty tư nhân đầu tiên tại Việt Nam
           sản xuất máy bay ngay trên chính quê hương mình. Với nền tảng vững
           chắc từ gần 30 năm kinh nghiệm trong ngành hàng không, chúng tôi hướng
@@ -32,14 +32,17 @@ export default function CompanyIntro() {
           đồ hàng không thế giới.
         </p>
         <br />
-        <p className="text-justify text-sm md:text-lg">
+        <p className="text-justify text-lg">
           Với cội nguồn là niềm đam mê chinh phục bầu trời, chúng tôi kết hợp
           tinh hoa thiết kế từ Ý cùng tay nghề chế tạo của người Việt tại nhà
           máy hiện đại ở Vĩnh Phúc. Flying Legend Vietnam không chỉ chế tạo máy
-          bay mà còn hiện thực hóa những giấc mơ, với khát vọng hiện đại hóa
-          công tác huấn luyện bay, củng cố quốc phòng và mang lại niềm tự hào
-          cho quê hương. Hãy cùng đồng hành với chúng tôi trên hành trình đưa
-          ngành hàng không Việt Nam vươn tới những tầm cao mới.
+          bay mà còn hiện thực hóa những giấc mơ, với khát vọng vươn lên cùng
+          đất nước cùng chủ trương mang tính chiến lược của Đảng và Chính phủ,
+          xây dựng nền công nghiệp quốc phòng, tiên tiến, hiện đại, tự lực tự
+          cường, Flying Legend Vietnam đặt ra tầm nhìn là nhà sản xuất máy bay
+          hàng đầu tại Việt Nam, mang tầm quốc tế và mang lại niềm tự hào cho
+          quê hương. Hãy cùng đồng hành với chúng tôi trên hành trình đưa ngành
+          công nghiệp hàng không Việt Nam vươn tới những tầm cao mới.
         </p>
       </div>
     </section>

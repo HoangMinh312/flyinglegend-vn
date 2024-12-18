@@ -36,7 +36,7 @@ export default function Header() {
             className={`transition-all duration-500 ease-in-out 
     ${
       isScrolled
-        ? "w-20 lg:w-28 h-12 lg:h-18"
+        ? "w-20 lg:w-26 h-12 lg:h-18"
         : "w-20 sm:w-40 lg:w-32 h-12 sm:h-20 lg:h-24"
     }`}
           />
@@ -69,25 +69,27 @@ export default function Header() {
           <ul className="flex space-x-4">
             <li>
               <Button variant="link" asChild>
-                <Link
-                  href="/tp-150"
-                  className="text-white hover:text-gray-200"
-                >
+                <Link href="/tp-150" className="text-white hover:text-gray-200">
                   TP-150
                 </Link>
               </Button>
             </li>
-            {/* <li>
-              <Button variant="link" asChild>
-                <Link href="/order" className="text-white hover:text-gray-200">
-                  Đặt Hàng
-                </Link>
-              </Button>
-            </li> */}
             <li>
               <Button variant="link" asChild>
                 <Link href="/press" className="text-white hover:text-gray-200">
                   Tin Tức
+                </Link>
+              </Button>
+            </li>
+            <li>
+              <Button variant="link" asChild>
+                <Link
+                  href="https://1drv.ms/f/s!AoXOk85bxTyjie9HgGKumn5Cw7VYMQ?e=G2cArf"
+                  target="_blank"
+                  rel="noopen noreferrer"
+                  className="text-white hover:text-gray-200"
+                >
+                  Download
                 </Link>
               </Button>
             </li>
@@ -145,15 +147,6 @@ export default function Header() {
                 TP-150
               </Link>
             </li>
-            {/* <li>
-              <Link
-                onClick={toggleMenu}
-                href="/order"
-                className="block text-[#232325] hover:text-gray-600"
-              >
-                Đặt Hàng
-              </Link>
-            </li> */}
             <li>
               <Link
                 onClick={toggleMenu}
@@ -161,6 +154,17 @@ export default function Header() {
                 className="block text-[#232325] hover:text-gray-600"
               >
                 Tin Tức
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={toggleMenu}
+                href="https://1drv.ms/f/s!AoXOk85bxTyjie9HgGKumn5Cw7VYMQ?e=G2cArf"
+                target="_blank"
+                rel="noopen noreferrer"
+                className="block text-[#232325] hover:text-gray-600"
+              >
+                Download
               </Link>
             </li>
             <li>

@@ -19,22 +19,22 @@ export default function PressPage() {
     },
     {
       id: 2,
-      title: "Lộ diện công ty sản xuất máy bay huấn luyện quân sự Made in Vietnam đầu tiên, đặt tại Vĩnh Phúc",
-      date: "17 Tháng 12, 2024",
+      title: "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
+      date: "18 Tháng 12, 2024",
       excerpt:
-        "CTCP Flying Legend Việt Nam thành lập vào tháng 11/2023 với vốn điều lệ 500 triệu đồng. Hoạt động kinh doanh chính là sản xuất máy bay, tàu vũ trụ và máy móc liên quan.",
+        "(Dân trí) - TP-150 là sản phẩm hợp tác giữa Việt Nam và Ý, phục vụ công tác huấn luyện bay sơ cấp và nhiệm vụ tuần tra, được trưng bày tại Triển lãm Quốc phòng quốc tế Việt Nam 2024.",
       image: pic2,
-      link: "https://cafef.vn/lo-dien-cong-ty-san-xuat-may-bay-huan-luyen-quan-su-made-in-vietnam-dau-tien-dat-tai-vinh-phuc-188241217144330232.chn",
+      link: "https://dantri.com.vn/xa-hoi/may-bay-huan-luyen-san-xuat-o-viet-nam-trung-bay-tai-trien-lam-quoc-phong-20241218071145196.htm",
     },
     {
       id: 3,
-      title: "Lộ diện công ty sản xuất máy bay huấn luyện quân sự Made in Vietnam đầu tiên, đặt tại Vĩnh Phúc",
-      date: "17 Tháng 12, 2024",
+      title: "Cận cảnh chiếc máy bay đầu tiên sản xuất tại Việt Nam",
+      date: "18 Tháng 12, 2024",
       excerpt:
-        "CTCP Flying Legend Việt Nam thành lập vào tháng 11/2023 với vốn điều lệ 500 triệu đồng. Hoạt động kinh doanh chính là sản xuất máy bay, tàu vũ trụ và máy móc liên quan.",
+        "TP-150 là loại máy bay huấn luyện cơ bản và tuần tra dành cho quân đội. Đây là sản phẩm của liên doanh hợp tác giữa Italy và Việt Nam, thiết kế bởi Công ty Flying Legend Italy và sản xuất tại nhà máy ở tỉnh Vĩnh Phúc.",
       image: pic3,
-      link: "https://markettimes.vn/lo-dien-cong-ty-san-xuat-may-bay-huan-luyen-quan-su-made-in-vietnam-dau-tien-dat-tai-vinh-phuc-72069.html",
-    },
+      link: "https://www.sggp.org.vn/can-canh-chiec-may-bay-dau-tien-san-xuat-tai-viet-nam-post773566.html",
+    }
   ];
 
   return (

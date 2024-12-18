@@ -11,6 +11,10 @@ import plane6 from "./(assets)/plane6.jpeg";
 import plane7 from "./(assets)/plane7.jpeg";
 import plane8 from "./(assets)/plane8.jpeg";
 
+import planeSchematic1 from "./(assets)/plane_schema1.jpg";
+import planeSchematic2 from "./(assets)/plane_schema2.jpg";
+import planeSchematic3 from "./(assets)/plane_schema3.jpg";
+
 export default function Products() {
   const galleryImages = [
     { src: plane1, alt: "plane Image 1" },
@@ -116,29 +120,13 @@ export default function Products() {
               </h3>
               <table className="table-auto border-collapse border border-gray-300 w-full text-gray-600">
                 <tbody>
-                  {/* <tr>
-                    <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
-                      Trọng lượng cất cánh tối đa
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      750 kg (hệ số tải trọng +6/-3G)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
-                      Trọng lượng cất cánh tối đa
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      820 kg (hệ số tải trọng +4/-2G)
-                    </td>
-                  </tr> */}
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
                       Trọng lượng cất cánh tối đa
                     </td>
                     <td className="px-4 py-2">
-                      <tr>750 kg (hệ số tải trọng +6/-3G)</tr>
-                      <tr>820 kg (hệ số tải trọng +4/-2G)</tr>
+                      <p>750 kg (hệ số tải trọng +6/-3G)</p>
+                      <p>820 kg (hệ số tải trọng +4/-2G)</p>
                     </td>
                   </tr>
                   <tr>
@@ -213,9 +201,7 @@ export default function Products() {
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
                       Trần bay
                     </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      7000 m
-                    </td>
+                    <td className="border border-gray-300 px-4 py-2">7000 m</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
@@ -237,14 +223,11 @@ export default function Products() {
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
                       Độ dài đường cất/hạ cánh tối thiểu
                     </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      500 m
-                    </td>
+                    <td className="border border-gray-300 px-4 py-2">500 m</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
             <div>
               <h3 className="text-xl font-semibold mb-2">Động Cơ</h3>
               <table className="table-auto border-collapse border border-gray-300 w-full text-gray-600">
@@ -261,7 +244,9 @@ export default function Products() {
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
                       Công suất
                     </td>
-                    <td className="border border-gray-300 px-4 py-2">150 mã lực</td>
+                    <td className="border border-gray-300 px-4 py-2">
+                      150 mã lực
+                    </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-300 px-4 py-2 bg-gray-400 bg-opacity-60">
@@ -289,6 +274,39 @@ export default function Products() {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Plane schematics  */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            Sơ Đồ Máy Bay TP-150
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 border border-gray-400 rounded-lg">
+            <div className="relative w-full h-52 mg:h-[50vh]">
+              <Image
+                src={planeSchematic1}
+                alt="Plane Schematic 1"
+                layout="fill"
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <div className="relative w-full h-52 md:h-[50vh]">
+              <Image
+                src={planeSchematic2}
+                alt="Plane Schematic 2"
+                layout="fill"
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <div className="relative w-full h-52 md:h-[50vh]">
+              <Image
+                src={planeSchematic3}
+                alt="Plane Schematic 3"
+                layout="fill"
+                className="object-contain rounded-lg"
+              />
             </div>
           </div>
         </section>
