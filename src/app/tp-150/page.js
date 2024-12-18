@@ -284,7 +284,7 @@ export default function Products() {
             Sơ Đồ Máy Bay TP-150
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 border border-gray-400 rounded-lg">
-            <div className="relative w-full h-52 mg:h-[50vh]">
+            <div className="relative w-full h-52 md:h-[50vh]">
               <Image
                 src={planeSchematic1}
                 alt="Plane Schematic 1"
