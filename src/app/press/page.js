@@ -6,6 +6,8 @@ import pic2 from "./(assets)/news2.png";
 import pic3 from "./(assets)/news3.png";
 import pic4 from "./(assets)/news4.jpg";
 
+import subheaderimage from "./(assets)/subheader-pic1.jpg";
+
 export default function PressPage() {
   // Data for the news items
   const newsItems = [
@@ -57,7 +59,7 @@ export default function PressPage() {
           { label: "Trang Chủ", href: "/" },
           { label: "Tin Tức", href: "/press" },
         ]}
-        backgroundImage="/subheader-pic1.jpg"
+        backgroundImage={subheaderimage}
       />
       <div className="container mx-auto px-4 py-16">
         {/* Reusing the NewsPage component */}

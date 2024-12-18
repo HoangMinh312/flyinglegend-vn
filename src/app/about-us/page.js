@@ -7,6 +7,8 @@ import photo3 from "./(assets)/about-us3.jpeg";
 import photo4 from "./(assets)/about-us4.jpg";
 import photo5 from "./(assets)/about-us5.jpg";
 
+import subheaderimage from "./(assets)/subheader-pic1.jpg";
+
 export default function AboutUs() {
   return (
     <>
@@ -16,7 +18,7 @@ export default function AboutUs() {
           { label: "Trang chủ", href: "/" },
           { label: "Hành Trình Của Chúng Tôi", href: "/about" },
         ]}
-        backgroundImage="/subheader-pic1.jpg"
+        backgroundImage={subheaderimage}
       />
       <div className="container mx-auto px-4 py-16 flex-col gap-6">
         <h2 className="my-8 text-4xl font-bold">

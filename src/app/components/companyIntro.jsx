@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
+import subheaderimage from "./(assets)/subheader-pic.jpg";
+
 export default function CompanyIntro() {
   return (
     <section className="flex-col justify-start items-center w-full overflow-hidden mb-10">
       <div className="relative h-24 md:h-36 lg:h-48 overflow-hidden w-full">
         <Image
-          src="/subheader-pic2.jpg"
+          src={subheaderimage}
           alt="Page header background"
           fill
           className="object-cover"
