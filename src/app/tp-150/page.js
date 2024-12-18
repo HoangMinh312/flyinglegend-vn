@@ -125,8 +125,8 @@ export default function Products() {
                       Trọng lượng cất cánh tối đa
                     </td>
                     <td className="px-4 py-2">
-                      <p>750 kg (hệ số tải trọng +6/-3G)</p>
-                      <p>820 kg (hệ số tải trọng +4/-2G)</p>
+                      <p>750 kg (hệ số quá tải +6/-3G)</p>
+                      <p>820 kg (hệ số quá tải +4/-2G)</p>
                     </td>
                   </tr>
                   <tr>
@@ -170,7 +170,7 @@ export default function Products() {
                       Tốc độ leo cao
                     </td>
                     <td className="border border-gray-300 px-4 py-2">
-                      400 m/phút (leo tới tối đa 3050 m)
+                      400 m/phút (tới mực bay 3050 m)
                     </td>
                   </tr>
                   <tr>
@@ -178,7 +178,7 @@ export default function Products() {
                       Thất tốc
                     </td>
                     <td className="border border-gray-300 px-4 py-2">
-                      92.6 km/giờ (khi chuẩn bị hạ cánh)
+                      92.6 km/giờ (tiếp cận hạ cánh)
                     </td>
                   </tr>
                   <tr>
@@ -281,7 +281,7 @@ export default function Products() {
         {/* Plane schematics  */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-4 text-center">
-            Sơ Đồ Máy Bay TP-150
+            Thông Số Kích Thước Máy Bay TP-150
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 border border-gray-400 rounded-lg">
             <div className="relative w-full h-52 md:h-[50vh]">
