@@ -11,11 +11,11 @@ export default function Home() {
     <main className="flex-col min-h-screen items-center justify-start gap-0">
       <VideoHero videoId={"w7zq0Nsqcfo"}/>
       {/* Company Intro */}
-      {/* <CompanyIntro /> */}
+      <CompanyIntro />
       {/* Picture Gallery */}
-      {/* <GalleryCarousel /> */}
+      <GalleryCarousel />
       {/* News */}
-      {/* <NewsCarousel /> */}
+      <NewsCarousel />
     </main>
   );
 }
