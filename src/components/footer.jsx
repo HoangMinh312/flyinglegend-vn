@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="text-sm text-white">
               Flying Legend Vietnam và TP-150 không chỉ đơn thuần là một sản
               phẩm, mà còn là niềm tự hào của đội ngũ chúng tôi, góp một viên
-              gạch đầu tiên cho nền sản xuất máy bay Việt nam.
+              gạch đầu tiên cho nền sản xuất máy bay Việt Nam.
             </p>
           </div>
           <div>

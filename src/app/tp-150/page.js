@@ -340,7 +340,7 @@ export default function Products() {
           <div className="relative w-full h-72 md:h-96 lg:h-fit aspect-video">
             <iframe
               className="absolute inset-0 w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/eJopS3T8o30" // Replace VIDEO_ID
+              src="https://www.youtube.com/embed/w7zq0Nsqcfo" // Replace VIDEO_ID
               title="TP-150"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
