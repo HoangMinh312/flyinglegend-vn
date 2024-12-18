@@ -22,7 +22,7 @@ export default function CompanyIntro() {
       </div>
       <div className="relative px-4 lg:px-10 sm:px-6 mx-auto max-w-screen-xl w-full mt-4 lg:mt-10">
         <p className="text-justify text-lg">
-          Flying Legend Vietnam là công ty liên doanh giữa Ý và Việt Nam, sản
+          <b>Flying Legend Vietnam</b> là công ty liên doanh giữa Ý và Việt Nam, sản
           xuất máy bay hạng nhẹ theo công nghệ và thiết kế của Flying Legend
           Italy. Với nền tảng kiến thức từ gần 30 năm kinh nghiệm trong ngành
           hàng không, đội ngũ chúng tôi hướng đến việc phát triển hoạt động lắp
@@ -36,8 +36,11 @@ export default function CompanyIntro() {
           ngũ những người làm kỹ thuật hàng không, mong muốn góp phần nhỏ bé của
           mình vào nền công nghiệp quốc phòng Việt nam. Chúng tôi muốn được là
           các thành viên đầu tiên thuộc nhóm các doanh nghiệp tư nhân tham gia
-          vào Luật Quốc phòng, An ninh và động viên Công nghiệp. Flying Legend
-          Vietnam – Khát vọng vươn mình cùng đất nước.
+          vào Luật Quốc phòng, An ninh và động viên Công nghiệp.
+        </p>
+        <br />
+        <p className="text-justify text-lg">
+          <b>Flying Legend Vietnam</b> – Khát vọng vươn mình cùng đất nước.
         </p>
       </div>
     </section>
