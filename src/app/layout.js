@@ -16,15 +16,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="vi">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="FLV" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link
           href="https://fonts.cdnfonts.com/css/bank-gothic"
           rel="stylesheet"
         />
-        <meta
-          property="og:title"
-          content="Flying Legend Vietnam"
-        />
+        <meta property="og:title" content="Flying Legend Vietnam" />
         <meta
           property="og:description"
           content="Discover the innovative TP150 aircraft, proudly manufactured in Vietnam to meet international standards."
@@ -40,7 +51,10 @@ export default function RootLayout({ children }) {
           name="twitter:description"
           content="Khám phá Flying Legend Vietnam và khát vọng vươn mình cùng đất nước với chiếc máy bay TP-150."
         />
-        <meta name="twitter:image" content="https://www.flyinglegend.vn/flyinglegend-logo.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://www.flyinglegend.vn/flyinglegend-logo.jpg"
+        />
       </head>
       <body>
         <FontProvider>
