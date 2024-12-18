@@ -2,6 +2,8 @@ import { SubHeader } from "@/components/subheader";
 import Image from "next/image";
 import React from "react";
 
+import subheaderimage from "./(assets)/subheader-pic.jpg";
+
 import plane1 from "./(assets)/plane1.jpg";
 import plane2 from "./(assets)/plane2.jpg";
 import plane3 from "./(assets)/plane3.jpg";
@@ -35,7 +37,7 @@ export default function Products() {
           { label: "Trang Chủ", href: "/" },
           { label: "TP-150 | Huấn Luyện và Tuần Tra", href: "/tp-150" },
         ]}
-        backgroundImage="/subheader-pic2.jpg"
+        backgroundImage={subheaderimage}
       />
 
       {/* Introduction */}
