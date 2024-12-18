@@ -7,7 +7,7 @@ import { Countdown } from "./countdown";
 export default function ComingSoonPage() {
     return (
         <div className="flex flex-col items-center text-center">
-        <div className="flex items-center space-x-4 w-full">
+        <div className="flex items-center space-x-4 w-1/2">
           <div className="flex-col w-full items-center">
             <h1 className="font-alex-brush text-3xl text-blue-800 md:text-5xl lg:text-6xl flex justify-start">
               Khát vọng vươn mình
