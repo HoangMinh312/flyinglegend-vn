@@ -8,8 +8,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 export const metadata = {
-  title: "Flying Legend Vietnam - Coming Soon",
-  description: "Flying Legend Vietnam - Under Construction",
+  title: "Flying Legend Vietnam",
+  description: "Flying Legend Vietnam",
 };
 
 export default function RootLayout({ children }) {
