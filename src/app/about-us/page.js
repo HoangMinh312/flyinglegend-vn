@@ -7,6 +7,8 @@ import photo3 from "./(assets)/about-us3.jpeg";
 import photo4 from "./(assets)/about-us4.jpg";
 import photo5 from "./(assets)/about-us5.jpg";
 
+import subheaderimage from "./(assets)/subheader-pic1.jpg";
+
 export default function AboutUs() {
   return (
     <>
@@ -16,7 +18,7 @@ export default function AboutUs() {
           { label: "Trang chủ", href: "/" },
           { label: "Hành Trình Của Chúng Tôi", href: "/about" },
         ]}
-        backgroundImage="/subheader-pic1.jpg"
+        backgroundImage={subheaderimage}
       />
       <div className="container mx-auto px-4 py-16 flex-col gap-6">
         <h2 className="my-8 text-4xl font-bold">
@@ -27,11 +29,11 @@ export default function AboutUs() {
           <h3 className="text-2xl font-semibold mb-4">Sứ Mệnh</h3>
           <p className="text-lg">
             Năm 2023, Flying Legend Vietnam đánh dấu sự gia nhập ngành hàng
-            không Việt Nam với sứ mệnh sản xuất và lắp ráp máy bay trong nước,
-            hợp tác với Flying Legend Italy, nhà sản xuất máy bay đến từ Cộng
-            hòa Ý. Cơ sở của sự hợp tác là tầm nhìn chung về sự hoàn hảo, sự
-            sáng tạo và cam kết chế tạo máy bay đẳng cấp quốc tế đáp ứng nhu cầu
-            dân sự, quân sự đa dạng.
+            không Việt Nam với sứ mệnh sản xuất và lắp ráp máy bay trong nước
+            bằng việc hợp tác với Flying Legend Italy, một công ty sản xuất máy
+            bay đến từ Cộng hòa Ý. Cơ sở của sự hợp tác là tầm nhìn chung về sự
+            hoàn hảo, sự sáng tạo và cam kết chế tạo máy bay đạt tiêu chuẩn quốc
+            tế, đáp ứng các nhu cầu dân sự, quân sự đa dạng.
           </p>
         </section>
         <section className="my-8 w-full lg:w-3/5 mx-auto">
@@ -49,10 +51,13 @@ export default function AboutUs() {
         <section className="my-8">
           <h3 className="text-2xl font-semibold mb-4">Tầm Nhìn</h3>
           <p className="text-lg">
-            Với chủ trương mang tính chiến lược của Đảng và Chính phủ, xây dựng
-            nền công nghiệp quốc phòng, tiên tiến, hiện đại, tự lực tự cường,
-            Flying Legend Vietnam đặt ra tầm nhìn là nhà sản xuất máy bay hàng
-            đầu tại Việt Nam, mang tầm quốc tế.
+            Thấm nhuần chủ trương chiến lược của Đảng và Chính phủ, xây dựng nền
+            công nghiệp quốc phòng tiên tiến, hiện đại, tự lực tự cường, Flying
+            Legend Vietnam đặt cho mình tầm nhìn là trở thành nhà sản xuất lắp
+            ráp các loại máy bay hạng nhẹ ở Việt Nam, nỗ lực tiếp nhận chuyển
+            giao công nghệ, từ đó tiến tới tự thiết kế được các dòng máy bay
+            phục vụ cho mục đích an ninh quốc phòng và phát triển lĩnh vực hàng
+            không chung ở Việt nam.
           </p>
         </section>
         <section className="my-8 w-full lg:w-3/5 mx-auto">
@@ -71,12 +76,12 @@ export default function AboutUs() {
             Cam Kết Về Chất Lượng Và Cải Tiến
           </h3>
           <p className="text-lg">
-            Flying Legend Vietnam cam kết duy trì tuân thủ các tiêu chuẩn quốc
-            tế cao nhất về thiết kế, chế tạo máy bay, cùng các tiêu chuẩn cho
-            các sản phẩm quân sự. Các quy trình kiểm tra và kiểm soát chất lượng
-            nghiêm ngặt được áp dụng trong toàn bộ quá trình, đảm bảo Flying
-            Legend Vietnam luôn đi đầu trong các tiến bộ công nghệ, cung cấp các
-            sản phẩm đáp ứng và vượt mong đợi của thị trường
+            Chúng tôi cam kết duy trì tuân thủ các tiêu chuẩn hàng không quốc tế
+            về thiết kế, chế tạo máy bay, cùng các tiêu chuẩn cho các sản phẩm
+            quân sự. Các quy trình kiểm tra và kiểm soát chất lượng nghiêm ngặt
+            được áp dụng trong toàn bộ quá trình lắp ráp, đảm bảo mỗi máy bay
+            xuất xưởng là một sản phẩm hoàn hảo đáp ứng các yêu cầu khắt khe của
+            khách hàng.
           </p>
         </section>
         <section className="my-8 w-full lg:w-3/5 mx-auto">
@@ -92,12 +97,15 @@ export default function AboutUs() {
             Triển Vọng Tương Lai Và Mở Rộng
           </h3>
           <p className="text-lg">
-            Flying Legend Vietnam đang sẵn sàng cho sự tăng trưởng và mở rộng.
-            TP-150 chỉ là bước khởi đầu. Công ty đã có các kế hoạch mở rộng thị
-            trường và phát triển thêm các dòng máy bay đáp ứng nhu cầu của cả
-            quân đội và dân sự. Việc đầu tư liên tục vào nghiên cứu và phát
-            triển sẽ thúc đẩy sự cải tiến sản phẩm, đảm bảo Flying Legend
-            Vietnam luôn đi đầu trong ngành chế tạo máy bay.
+            Chúng tôi tin rằng quốc gia nào làm chủ được bầu trời, sẽ là một
+            quốc gia hùng mạnh. Là một doanh nghiệp tư nhân, chúng tôi có chung
+            khát vọng vươn mình trong kỷ nguyên mới của đất nước. Vì vậy TP-150
+            chỉ là bước khởi đầu. Công ty đã có các kế hoạch phát triển thêm các
+            dòng máy bay đáp ứng nhu cầu của cả quân đội và dân sự. Việc đầu tư
+            liên tục vào “con người” đồng thời mở rộng hợp tác học hỏi từ các
+            đối tác nước ngoài, sẽ là nhân tố chính giúp cho việc nghiên cứu và
+            phát triển sản phẩm của Flying Legend Việt nam. Chúng tôi đã sẵn
+            sàng cho sự tăng trưởng và mở rộng xuất khẩu ra thị trường quốc tế.
           </p>
         </section>
         <section className="my-8 w-full lg:w-3/5 mx-auto">

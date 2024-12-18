@@ -12,9 +12,9 @@ export default function Footer() {
               Về Chúng Tôi
             </h3>
             <p className="text-sm text-white">
-              Flying Legend Vietnam và sản phẩm TP-150 không chỉ đơn thuần là
-              một sản phẩm, mà còn là niềm tự hào, một viên gạch đầu tiên cho
-              nền sản xuất máy bay Việt nam
+              Flying Legend Vietnam và TP-150 không chỉ đơn thuần là một sản
+              phẩm, mà còn là niềm tự hào của đội ngũ chúng tôi, góp một viên
+              gạch đầu tiên cho nền sản xuất máy bay Việt Nam.
             </p>
           </div>
           <div>
@@ -42,10 +42,8 @@ export default function Footer() {
                 <p className="text-white">
                   TDP Hưởng Lộc, Đạo Đức, Bình Xuyên, Vĩnh Phúc, Việt Nam
                 </p>
-                <p className="text-white">
-                  Tel: {"+84 (0) 90 329 8676"} Email: flv@flyinglegend.vn
-                </p>
-                <p className="text-white"></p>
+                <p className="text-white">Tel: +84 (0) 90 329 8676</p>
+                <p className="text-white">Email: flv@flyinglegend.vn</p>
               </div>
             </div>
           </div>

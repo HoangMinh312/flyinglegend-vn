@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+import logo from "./(assets)/flyinglegend-logo.png";
+
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,16 +32,15 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/flyinglegend-logo.png"
+            src={logo}
             alt="Flying Legend Vietnam"
-            width={155}
-            height={101}
+            width={155} // Natural width of the image
+            height={101} // Natural height of the image
             className={`transition-all duration-500 ease-in-out 
-    ${
-      isScrolled
-        ? "w-20 lg:w-26 h-12 lg:h-18"
-        : "w-20 sm:w-40 lg:w-32 h-12 sm:h-20 lg:h-24"
-    }`}
+    ${isScrolled ? "w-20 lg:w-26" : "w-20 sm:w-40 lg:w-32"}`}
+            style={{
+              height: "auto", // Automatically adjusts height to preserve aspect ratio
+            }}
           />
         </Link>
 

@@ -8,15 +8,14 @@ import NewsCarousel from "./components/newsCarousel";
 
 export default function Home() {
   return (
-    <main className="flex-col min-h-screen items-center justify-start gap-0 bg-blue-400">
-      <ComingSoonPage />
-      {/* <VideoHero videoId={"eJopS3T8o30"}/> */}
+    <main className="flex-col min-h-screen items-center justify-start gap-0">
+      <VideoHero videoId={"w7zq0Nsqcfo"}/>
       {/* Company Intro */}
-      {/* <CompanyIntro /> */}
+      <CompanyIntro />
       {/* Picture Gallery */}
-      {/* <GalleryCarousel /> */}
+      <GalleryCarousel />
       {/* News */}
-      {/* <NewsCarousel /> */}
+      <NewsCarousel />
     </main>
   );
 }

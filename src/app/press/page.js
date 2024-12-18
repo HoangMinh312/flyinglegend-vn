@@ -4,6 +4,9 @@ import NewsPage from "./components/NewsGrid";
 import pic1 from "./(assets)/news1.png";
 import pic2 from "./(assets)/news2.png";
 import pic3 from "./(assets)/news3.png";
+import pic4 from "./(assets)/news4.jpg";
+
+import subheaderimage from "./(assets)/subheader-pic1.jpg";
 
 export default function PressPage() {
   // Data for the news items
@@ -19,7 +22,8 @@ export default function PressPage() {
     },
     {
       id: 2,
-      title: "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
+      title:
+        "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
       date: "18 Tháng 12, 2024",
       excerpt:
         "(Dân trí) - TP-150 là sản phẩm hợp tác giữa Việt Nam và Ý, phục vụ công tác huấn luyện bay sơ cấp và nhiệm vụ tuần tra, được trưng bày tại Triển lãm Quốc phòng quốc tế Việt Nam 2024.",
@@ -34,7 +38,17 @@ export default function PressPage() {
         "TP-150 là loại máy bay huấn luyện cơ bản và tuần tra dành cho quân đội. Đây là sản phẩm của liên doanh hợp tác giữa Italy và Việt Nam, thiết kế bởi Công ty Flying Legend Italy và sản xuất tại nhà máy ở tỉnh Vĩnh Phúc.",
       image: pic3,
       link: "https://www.sggp.org.vn/can-canh-chiec-may-bay-dau-tien-san-xuat-tai-viet-nam-post773566.html",
-    }
+    },
+    {
+      id: 4,
+      title:
+        "Triển lãm Quốc phòng quốc tế Việt Nam 2024: “Mục sở thị” máy bay huấn luyện đầu tiên sản xuất tại Việt Nam",
+      date: "18 Tháng 12, 2024",
+      excerpt:
+        "Tại khu trưng bày ngoài trời của Triển lãm Quốc phòng quốc tế Việt Nam 2024 xuất hiện một chiếc máy bay đặc biệt. Đó là chiếc TP-150 - máy bay huấn luyện đầu tiên sản xuất tại Việt Nam.",
+      image: pic4,
+      link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
+    },
   ];
 
   return (
@@ -45,7 +59,7 @@ export default function PressPage() {
           { label: "Trang Chủ", href: "/" },
           { label: "Tin Tức", href: "/press" },
         ]}
-        backgroundImage="/subheader-pic1.jpg"
+        backgroundImage={subheaderimage}
       />
       <div className="container mx-auto px-4 py-16">
         {/* Reusing the NewsPage component */}

@@ -3,12 +3,12 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import pic1 from "../press/(assets)/news1.png";
 import pic2 from "../press/(assets)/news2.png";
 import pic3 from "../press/(assets)/news3.png";
-
+import pic4 from "../press/(assets)/news4.jpg";
 
 const newsData = [
   {
@@ -20,7 +20,8 @@ const newsData = [
   },
   {
     id: 2,
-    title: "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
+    title:
+      "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
     date: "18 Tháng 12, 2024",
     image: pic2,
     link: "https://dantri.com.vn/xa-hoi/may-bay-huan-luyen-san-xuat-o-viet-nam-trung-bay-tai-trien-lam-quoc-phong-20241218071145196.htm",
@@ -31,11 +32,19 @@ const newsData = [
     date: "18 Tháng 12, 2024",
     image: pic3,
     link: "https://www.sggp.org.vn/can-canh-chiec-may-bay-dau-tien-san-xuat-tai-viet-nam-post773566.html",
-  }, 
+  },
+  {
+    id: 4,
+    title:
+      "Triển lãm Quốc phòng quốc tế Việt Nam 2024: “Mục sở thị” máy bay huấn luyện đầu tiên sản xuất tại Việt Nam",
+    date: "18 Tháng 12, 2024",
+    image: pic4,
+    link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
+  },
 ];
 
 export default function NewsCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true});
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
@@ -68,7 +77,7 @@ export default function NewsCarousel() {
 
   return (
     <section className="relative mx-auto max-w-6xl my-16">
-        <h2 className="text-2xl font-semibold text-center">Tin Tức</h2>
+      <h2 className="text-2xl font-semibold text-center">Tin Tức</h2>
       <div className="embla_news overflow-hidden" ref={emblaRef}>
         <div className="embla__container_news flex">
           {newsData.map((news) => (
@@ -86,7 +95,15 @@ export default function NewsCarousel() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold"><a href={news.link} target="_blank" rel="noopener noreferrer">{news.title}</a></h3>
+                  <h3 className="text-lg font-semibold">
+                    <a
+                      href={news.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {news.title}
+                    </a>
+                  </h3>
                   <p className="text-sm text-gray-500">{news.date}</p>
                 </div>
               </div>
