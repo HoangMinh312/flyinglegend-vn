@@ -8,8 +8,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 export const metadata = {
-  title: "Flying Legend Vietnam",
-  description: "Flying Legend Vietnam",
+  title: "Flying Legend Vietnam - Khát vọng vươn mình cùng đất nước",
+  description: "Flying Legend Vietnam - Khát vọng vươn mình cùng đất nước",
 };
 
 export default function RootLayout({ children }) {
@@ -21,6 +21,26 @@ export default function RootLayout({ children }) {
           href="https://fonts.cdnfonts.com/css/bank-gothic"
           rel="stylesheet"
         />
+        <meta
+          property="og:title"
+          content="Flying Legend Vietnam"
+        />
+        <meta
+          property="og:description"
+          content="Discover the innovative TP150 aircraft, proudly manufactured in Vietnam to meet international standards."
+        />
+        <meta
+          property="og:image"
+          content="https://www.flyinglegend.vn/flyinglegend-logo.jpg"
+        />
+        <meta property="og:url" content="https://www.flyinglegend.vn" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Flying Legend Vietnam" />
+        <meta
+          name="twitter:description"
+          content="Khám phá Flying Legend Vietnam và khát vọng vươn mình cùng đất nước với chiếc máy bay TP-150."
+        />
+        <meta name="twitter:image" content="https://www.flyinglegend.vn/flyinglegend-logo.jpg" />
       </head>
       <body>
         <FontProvider>
