@@ -9,6 +9,7 @@ import pic1 from "../press/(assets)/news1.png";
 import pic2 from "../press/(assets)/news2.png";
 import pic3 from "../press/(assets)/news3.png";
 import pic4 from "../press/(assets)/news4.jpg";
+import pic5 from "../press/(assets)/news5.jpg";
 
 const newsData = [
   {
@@ -40,6 +41,14 @@ const newsData = [
     date: "18 Tháng 12, 2024",
     image: pic4,
     link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
+  },
+  {
+    id: 5,
+    title:
+      "Chuyện về chiếc máy bay huấn luyện và tuần tra lần đầu tiên được sản xuất tại Việt Nam",
+    date: "18 Tháng 12, 2024",
+    image: pic5,
+    link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
   },
 ];
 

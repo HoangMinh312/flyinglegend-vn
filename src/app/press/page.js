@@ -5,6 +5,7 @@ import pic1 from "./(assets)/news1.png";
 import pic2 from "./(assets)/news2.png";
 import pic3 from "./(assets)/news3.png";
 import pic4 from "./(assets)/news4.jpg";
+import pic5 from "./(assets)/news5.jpg";
 
 import subheaderimage from "./(assets)/subheader-pic1.jpg";
 
@@ -48,6 +49,16 @@ export default function PressPage() {
         "Tại khu trưng bày ngoài trời của Triển lãm Quốc phòng quốc tế Việt Nam 2024 xuất hiện một chiếc máy bay đặc biệt. Đó là chiếc TP-150 - máy bay huấn luyện đầu tiên sản xuất tại Việt Nam.",
       image: pic4,
       link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
+    },
+    {
+      id: 5,
+      title:
+        "Chuyện về chiếc máy bay huấn luyện và tuần tra lần đầu tiên được sản xuất tại Việt Nam",
+      date: "18 Tháng 12, 2024",
+      excerpt:
+        "Ngày 19/12/2024, tại Triển lãm Quốc phòng quốc tế Việt Nam 2024, chiếc máy bay huấn luyện mang ký hiệu TP-150 được sản xuất tại Việt Nam bởi Công ty Flying Legend Vietnam lần đầu ra mắt công chúng. Có thể nói, việc sản xuất chiếc máy bay huấn luyện và tuần tra “made in Vietnam” đã thể hiện khát vọng làm chủ công nghệ, “làm chủ bầu trời” của người Việt.",
+      image: pic5,
+      link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
     },
   ];
 
