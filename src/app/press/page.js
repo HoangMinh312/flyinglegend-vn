@@ -6,6 +6,7 @@ import pic2 from "./(assets)/news2.png";
 import pic3 from "./(assets)/news3.png";
 import pic4 from "./(assets)/news4.jpg";
 import pic5 from "./(assets)/news5.jpg";
+import pic6 from "./(assets)/news6.jpg";
 
 import subheaderimage from "./(assets)/subheader-pic1.jpg";
 
@@ -59,6 +60,16 @@ export default function PressPage() {
         "Ngày 19/12/2024, tại Triển lãm Quốc phòng quốc tế Việt Nam 2024, chiếc máy bay huấn luyện mang ký hiệu TP-150 được sản xuất tại Việt Nam bởi Công ty Flying Legend Vietnam lần đầu ra mắt công chúng. Có thể nói, việc sản xuất chiếc máy bay huấn luyện và tuần tra “made in Vietnam” đã thể hiện khát vọng làm chủ công nghệ, “làm chủ bầu trời” của người Việt.",
       image: pic5,
       link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
+    },
+    {
+      id: 6,
+      title:
+        "Cựu sĩ quan Mỹ: Việt Nam ra mắt máy bay huấn luyện có 2 điểm vượt T-6C Mỹ, mở cơ hội quý cho Không quân",
+      date: "30 Tháng 12, 2024",
+      excerpt:
+        '"Tính linh hoạt tuyệt vời" - Cựu sĩ quan Không quân Mỹ Christian D. Orr nói về mẫu máy bay huấn luyện đầu tiên trong lịch sử sản xuất tại Việt Nam.',
+      image: pic6,
+      link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
     },
   ];
 
