@@ -11,6 +11,7 @@ import pic3 from "../press/(assets)/news3.png";
 import pic4 from "../press/(assets)/news4.jpg";
 import pic5 from "../press/(assets)/news5.jpg";
 import pic6 from "../press/(assets)/news6.jpg";
+import pic7 from "../press/(assets)/news7.jpg";
 
 const newsData = [
   {
@@ -58,6 +59,14 @@ const newsData = [
     date: "30 Tháng 12, 2024",
     image: pic6,
     link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
+  },
+  {
+    id: 7,
+    title:
+      "Mong muốn “góp một viên gạch” vào nền sản xuất máy bay Việt Nam",
+    date: "29 Tháng 1, 2025",
+    image: pic7,
+    link: "https://www.qdnd.vn/kinh-te/cac-van-de/mong-muon-gop-mot-vien-gach-vao-nen-san-xuat-may-bay-viet-nam-813723",
   },
 ];
 

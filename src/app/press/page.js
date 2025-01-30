@@ -7,6 +7,7 @@ import pic3 from "./(assets)/news3.png";
 import pic4 from "./(assets)/news4.jpg";
 import pic5 from "./(assets)/news5.jpg";
 import pic6 from "./(assets)/news6.jpg";
+import pic7 from "./(assets)/news7.jpg";
 
 import subheaderimage from "./(assets)/subheader-pic1.jpg";
 
@@ -70,6 +71,16 @@ export default function PressPage() {
         '"Tính linh hoạt tuyệt vời" - Cựu sĩ quan Không quân Mỹ Christian D. Orr nói về mẫu máy bay huấn luyện đầu tiên trong lịch sử sản xuất tại Việt Nam.',
       image: pic6,
       link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
+    },
+    {
+      id: 7,
+      title:
+        "Mong muốn “góp một viên gạch” vào nền sản xuất máy bay Việt Nam",
+      date: "29 Tháng 1, 2025",
+      excerpt:
+        'Tại Triển lãm Quốc phòng quốc tế Việt Nam 2024, máy bay huấn luyện, tuần tra TP-150 lần đầu ra mắt và thu hút rất nhiều sự quan tâm của khách tham quan. Đáng chú ý, đây là chiếc máy bay đầu tiên do một công ty tư nhân trong nước phối hợp với đối tác Italy để sản xuất nhiều bộ phận quan trọng và lắp ráp thành phẩm tại Việt Nam.',
+      image: pic7,
+      link: "https://www.qdnd.vn/kinh-te/cac-van-de/mong-muon-gop-mot-vien-gach-vao-nen-san-xuat-may-bay-viet-nam-813723",
     },
   ];
 
