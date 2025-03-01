@@ -9,7 +9,7 @@ const ArticlePreview = ({ article }) => {
         <img
           src={article.heroImageUrl}
           alt="Hero Image"
-          className="w-full h-64 object-cover"
+          className="w-full h-64 object-contain border rounded"
         />
       )}
       <div
@@ -25,7 +25,7 @@ const ArticlePreview = ({ article }) => {
                 key={index}
                 src={img}
                 alt={`Gallery ${index}`}
-                className="w-full h-32 object-cover"
+                className="w-full h-32 object-contain border rounded"
               />
             )
           ))}

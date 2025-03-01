@@ -1,18 +1,8 @@
 import { useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../../firebase/index";
 import { CldUploadWidget } from "next-cloudinary";
 import ImagePicker from "./ImagePicker";
-
-async function addArticle(articleData) {
-  try {
-    const articlesRef = collection(db, "articles");
-    const docRef = await addDoc(articlesRef, articleData);
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-}
+import SubmitButton from "./SubmitButton";
+import { auth } from "@/firebase";
 
 const ArticleForm = ({ onPreview }) => {
   const [article, setArticle] = useState({
@@ -24,6 +14,7 @@ const ArticleForm = ({ onPreview }) => {
   });
 
   const [showImagePicker, setShowImagePicker] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,15 +47,34 @@ const ArticleForm = ({ onPreview }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
-      await addDoc(collection(db, "articles"), {
-        ...article,
-        publishedDate: new Date(),
-        lastEditedDate: new Date(),
+      const token = await auth.currentUser.getIdToken();
+      const response = await fetch("/api/add-article", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...article,
+          publishedDate: new Date(),
+          lastEditedDate: new Date(),
+        }),
       });
-      alert("Article saved!");
-    } catch (err) {
-      console.error("Error adding article: ", err);
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(`Article added successfully with ID: ${data.id}`);
+      } else {
+        const data = await response.json();
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error adding article:", error);
+      alert("Failed to add article, please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -72,7 +82,9 @@ const ArticleForm = ({ onPreview }) => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       {/* Title Input with Label */}
       <div className="flex flex-col">
-        <label htmlFor="title" className="font-semibold">News Title</label>
+        <label htmlFor="title" className="font-semibold">
+          News Title
+        </label>
         <input
           id="title"
           name="title"
@@ -85,7 +97,9 @@ const ArticleForm = ({ onPreview }) => {
 
       {/* Excerpt Input with Label */}
       <div className="flex flex-col">
-        <label htmlFor="excerpt" className="font-semibold">News Excerpt</label>
+        <label htmlFor="excerpt" className="font-semibold">
+          News Excerpt
+        </label>
         <input
           id="excerpt"
           name="excerpt"
@@ -129,7 +143,9 @@ const ArticleForm = ({ onPreview }) => {
             />
             <button
               type="button"
-              onClick={() => handleImageDelete(article.heroImageUrl, "heroImageUrl")}
+              onClick={() =>
+                handleImageDelete(article.heroImageUrl, "heroImageUrl")
+              }
               className="absolute top-2 right-2 text-white bg-red-500 p-1 rounded-full"
             >
               X
@@ -194,7 +210,9 @@ const ArticleForm = ({ onPreview }) => {
 
       {/* Body Input with Label */}
       <div className="flex flex-col">
-        <label htmlFor="body" className="font-semibold">News Main Body</label>
+        <label htmlFor="body" className="font-semibold">
+          News Main Body
+        </label>
         <textarea
           id="body"
           name="body"
@@ -206,9 +224,7 @@ const ArticleForm = ({ onPreview }) => {
       </div>
 
       {/* Submit Button */}
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded" onClick={handleSubmit}>
-        Save Article
-      </button>
+      <SubmitButton isSubmitting={isSubmitting} onClick={handleSubmit} />
     </form>
   );
 };

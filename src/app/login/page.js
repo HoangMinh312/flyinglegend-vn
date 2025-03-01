@@ -23,7 +23,7 @@ export default function Login() {
 
       const token = await userCredential.user.getIdToken();
 
-      document.cookie = `authToken=${token}; path=/`;
+      document.cookie = `authToken=${token}; path=/; secure; HttpOnly; SameSite=Strict`;
 
       router.push("/dashboard");
     } catch (error) {
