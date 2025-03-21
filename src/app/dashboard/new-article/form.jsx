@@ -18,7 +18,7 @@ const ArticleForm = ({ onPreview }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setArticle({ ...article, [name]: value });
+    setArticle((prev) => ({ ...prev, [name]: value }));
     onPreview({ ...article, [name]: value });
   };
 
