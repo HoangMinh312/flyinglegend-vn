@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import { SubHeader } from "@/components/subheader";
 import NewsPage from "./components/NewsGrid";
 
+import pic1 from "./(assets)/news1.png";
+import pic2 from "./(assets)/news2.png";
+import pic3 from "./(assets)/news3.png";
+import pic4 from "./(assets)/news4.jpg";
+import pic5 from "./(assets)/news5.jpg";
+import pic6 from "./(assets)/news6.jpg";
+import pic7 from "./(assets)/news7.jpg";
+
 import subheaderimage from "./(assets)/subheader-pic1.jpg";
 
 export default function PressPage() {

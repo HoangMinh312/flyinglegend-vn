@@ -9,6 +9,9 @@ import pic1 from "../press/(assets)/news1.png";
 import pic2 from "../press/(assets)/news2.png";
 import pic3 from "../press/(assets)/news3.png";
 import pic4 from "../press/(assets)/news4.jpg";
+import pic5 from "../press/(assets)/news5.jpg";
+import pic6 from "../press/(assets)/news6.jpg";
+import pic7 from "../press/(assets)/news7.jpg";
 
 const newsData = [
   {
@@ -40,6 +43,30 @@ const newsData = [
     date: "18 Tháng 12, 2024",
     image: pic4,
     link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
+  },
+  {
+    id: 5,
+    title:
+      "Chuyện về chiếc máy bay huấn luyện và tuần tra lần đầu tiên được sản xuất tại Việt Nam",
+    date: "18 Tháng 12, 2024",
+    image: pic5,
+    link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
+  },
+  {
+    id: 6,
+    title:
+      "Cựu sĩ quan Mỹ: Việt Nam ra mắt máy bay huấn luyện có 2 điểm vượt T-6C Mỹ, mở cơ hội quý cho Không quân",
+    date: "30 Tháng 12, 2024",
+    image: pic6,
+    link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
+  },
+  {
+    id: 7,
+    title:
+      "Mong muốn “góp một viên gạch” vào nền sản xuất máy bay Việt Nam",
+    date: "29 Tháng 1, 2025",
+    image: pic7,
+    link: "https://www.qdnd.vn/kinh-te/cac-van-de/mong-muon-gop-mot-vien-gach-vao-nen-san-xuat-may-bay-viet-nam-813723",
   },
 ];
 
