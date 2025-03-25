@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 
 export function middleware(request) {
-    if (request.nextUrl.pathname.startsWith('/dashboard') || request.nextUrl.pathname.startsWith('/api')) {
+    if (request.nextUrl.pathname.startsWith('/dashboard')) {
         const token = request.cookies.get("authToken");
 
         const url = request.nextUrl.clone();

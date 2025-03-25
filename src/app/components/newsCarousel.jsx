@@ -5,76 +5,63 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import pic1 from "../press/(assets)/news1.png";
-import pic2 from "../press/(assets)/news2.png";
-import pic3 from "../press/(assets)/news3.png";
-import pic4 from "../press/(assets)/news4.jpg";
-import pic5 from "../press/(assets)/news5.jpg";
-import pic6 from "../press/(assets)/news6.jpg";
-import pic7 from "../press/(assets)/news7.jpg";
-
-const newsData = [
-  {
-    id: 1,
-    title: "Khám phá máy bay ‘Make in Vietnam’ tại Triển lãm Quốc phòng 2024",
-    date: "17 Tháng 12, 2024",
-    image: pic1,
-    link: "https://vietnamnet.vn/kham-pha-may-bay-make-in-vietnam-tai-trien-lam-quoc-phong-2024-2353123.html",
-  },
-  {
-    id: 2,
-    title:
-      "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
-    date: "18 Tháng 12, 2024",
-    image: pic2,
-    link: "https://dantri.com.vn/xa-hoi/may-bay-huan-luyen-san-xuat-o-viet-nam-trung-bay-tai-trien-lam-quoc-phong-20241218071145196.htm",
-  },
-  {
-    id: 3,
-    title: "Cận cảnh chiếc máy bay đầu tiên sản xuất tại Việt Nam",
-    date: "18 Tháng 12, 2024",
-    image: pic3,
-    link: "https://www.sggp.org.vn/can-canh-chiec-may-bay-dau-tien-san-xuat-tai-viet-nam-post773566.html",
-  },
-  {
-    id: 4,
-    title:
-      "Triển lãm Quốc phòng quốc tế Việt Nam 2024: “Mục sở thị” máy bay huấn luyện đầu tiên sản xuất tại Việt Nam",
-    date: "18 Tháng 12, 2024",
-    image: pic4,
-    link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
-  },
-  {
-    id: 5,
-    title:
-      "Chuyện về chiếc máy bay huấn luyện và tuần tra lần đầu tiên được sản xuất tại Việt Nam",
-    date: "18 Tháng 12, 2024",
-    image: pic5,
-    link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
-  },
-  {
-    id: 6,
-    title:
-      "Cựu sĩ quan Mỹ: Việt Nam ra mắt máy bay huấn luyện có 2 điểm vượt T-6C Mỹ, mở cơ hội quý cho Không quân",
-    date: "30 Tháng 12, 2024",
-    image: pic6,
-    link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
-  },
-  {
-    id: 7,
-    title:
-      "Mong muốn “góp một viên gạch” vào nền sản xuất máy bay Việt Nam",
-    date: "29 Tháng 1, 2025",
-    image: pic7,
-    link: "https://www.qdnd.vn/kinh-te/cac-van-de/mong-muon-gop-mot-vien-gach-vao-nen-san-xuat-may-bay-viet-nam-813723",
-  },
-];
-
 export default function NewsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
+  const [newsData, setNewsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // ✅ Fetch News from API
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch("/api/get-articles", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ maxResults: 7 }),
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch articles");
+
+        const articles = await response.json();
+
+        // ✅ Format articles to match carousel structure
+        const formattedNews = articles.map((article) => ({
+          id: article.id,
+          title: article.title,
+          date: article.publishedDate?.seconds
+            ? new Date(
+                article.publishedDate.seconds * 1000
+              ).toLocaleDateString("vi-VN", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+                timeZone: "Asia/Ho_Chi_Minh",
+              })
+            : "Không có ngày xuất bản",
+          image: article.heroImageUrl || "/placeholder.jpg", // Use default if no image
+          link:
+            article.type === "external"
+              ? article.externalUrl
+              : `/articles/${article.id}`,
+        }));
+
+        setNewsData(formattedNews);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  // ✅ Embla Scroll Controls
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi]
@@ -95,7 +82,6 @@ export default function NewsCarousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
-
     onSelect();
     setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
@@ -105,64 +91,75 @@ export default function NewsCarousel() {
   return (
     <section className="relative mx-auto max-w-6xl my-16">
       <h2 className="text-2xl font-semibold text-center">Tin Tức</h2>
-      <div className="embla_news overflow-hidden" ref={emblaRef}>
-        <div className="embla__container_news flex">
-          {newsData.map((news) => (
-            <div
-              key={news.id}
-              className="embla__slide_news flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pl-4"
-            >
-              <div className="h-full border border-gray-300 rounded-lg overflow-hidden shadow-md bg-white">
-                <div className="relative h-40">
-                  <Image
-                    src={news.image}
-                    alt={news.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">
-                    <a
-                      href={news.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {news.title}
-                    </a>
-                  </h3>
-                  <p className="text-sm text-gray-500">{news.date}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+
+      {loading ? (
+        <div className="flex justify-center items-center min-h-[200px]">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 border-opacity-50"></div>
         </div>
-      </div>
+      ) : error ? (
+        <p className="text-center text-red-500">{error}</p>
+      ) : (
+        <>
+          <div className="embla_news overflow-hidden" ref={emblaRef}>
+            <div className="embla__container_news flex">
+              {newsData.map((news) => (
+                <div
+                  key={news.id}
+                  className="embla__slide_news flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pl-4"
+                >
+                  <div className="h-full border border-gray-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div className="relative h-40">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold">
+                        <a
+                          href={news.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {news.title}
+                        </a>
+                      </h3>
+                      <p className="text-sm text-gray-500">{news.date}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-      <button
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200"
-        onClick={scrollPrev}
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200"
-        onClick={scrollNext}
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
-
-      <div className="flex justify-center mt-4 space-x-2">
-        {scrollSnaps.map((_, index) => (
           <button
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              selectedIndex === index ? "bg-gray-800" : "bg-gray-400"
-            }`}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
-      </div>
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200"
+            onClick={scrollPrev}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-gray-800 rounded-full p-2 hover:bg-gray-200"
+            onClick={scrollNext}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          <div className="flex justify-center mt-4 space-x-2">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full ${
+                  selectedIndex === index ? "bg-gray-800" : "bg-gray-400"
+                }`}
+                onClick={() => scrollTo(index)}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

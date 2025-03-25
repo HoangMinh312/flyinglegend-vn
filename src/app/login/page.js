@@ -20,11 +20,9 @@ export default function Login() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const token = await userCredential.user.getIdToken();
-      console.log(token);
 
       document.cookie = `authToken=${token}; path=/; secure; SameSite=Strict`;
 
-      console.log(router);
       router.push("/dashboard");
     } catch (error) {
       setError("Invalid email or password. Please try again.");
