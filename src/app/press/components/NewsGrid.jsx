@@ -1,6 +1,7 @@
 import NewsCard from "./NewsCard";
 
 export default function NewsPage({ newsItems }) {
+  console.log(newsItems);
   return (
     <section className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-center mb-8">Tin Tức</h1>
@@ -8,15 +9,20 @@ export default function NewsPage({ newsItems }) {
         {newsItems.map((item) => (
           <NewsCard
             key={item.id}
+            id={item.id}
             title={item.title}
-            date={item.date}
+            publishedDate={item.publishedDate} // ✅ Pass the full object
             excerpt={item.excerpt}
-            image={item.image}
-            link={item.link}
+            image={
+              item.heroImageUrl && item.heroImageUrl.trim() !== ""
+                ? item.heroImageUrl
+                : null
+            }
+            link={item.externalUrl}
+            type={item.type}
           />
         ))}
       </div>
-      {/* Pagination component could go here */}
     </section>
   );
 }
