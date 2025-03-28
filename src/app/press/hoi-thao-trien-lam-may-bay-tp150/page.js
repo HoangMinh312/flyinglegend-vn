@@ -31,7 +31,7 @@ export default function ConferenceMarch2025() {
     <article className="max-w-5xl mx-auto px-4 py-12 prose prose-lg">
       {/* Title */}
       <h1 className="text-3xl">
-        <b>HỘI THẢO TRIỂN LÃM MÁY BAY TP-150</b>
+        <b>HỘI THẢO MÁY BAY TP-150</b>
       </h1>
       {/* Published Date */}
       <p className="text-sm text-gray-500 mb-2">28/03/2025</p>

@@ -16,7 +16,7 @@ export default function PressPage() {
   const newsItems = [
     {
       id: 0,
-      title: "HỘI THẢO TRIỂN LÃM MÁY BAY TP-150",
+      title: "HỘI THẢO MÁY BAY TP-150",
       date: "28 Tháng 3, 2025",
       excerpt:
         "Tiếp theo sự kiện giới thiệu máy bay TP-150 ra công chúng tại Triển lãm Quốc phòng Quốc tế Việt Nam 2024, ngày 14/03/2025 vừa qua, tại Trung tâm sự kiện Trống Đồng Palace Cảnh Hồ, Flying Legend Vietnam đã tổ chức buổi Hội thảo về dòng máy bay này, ...",
