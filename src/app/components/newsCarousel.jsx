@@ -15,6 +15,13 @@ import pic7 from "../press/(assets)/news7.jpg";
 
 const newsData = [
   {
+    id: 0,
+    title: "HỘI THẢO TRIỂN LÃM MÁY BAY TP-150",
+    date: "28 Tháng 3, 2025",
+    image: "/conferenceImages/heroImage.jpg",
+    link: "/press/hoi-thao-trien-lam-may-bay-tp150",
+  },
+  {
     id: 1,
     title: "Khám phá máy bay ‘Make in Vietnam’ tại Triển lãm Quốc phòng 2024",
     date: "17 Tháng 12, 2024",
