@@ -16,20 +16,27 @@ import pic7 from "../press/(assets)/news7.jpg";
 const newsData = [
   {
     id: 0,
+    title: "KHÁT VỌNG BẦU TRỜI – TỰ HÀO VIỆT NAM",
+    date: "28 Tháng 8, 2025",
+    image: "/conference-aug-2025/hero.jpg",
+    link: "/press/khat-vong-bau-troi",
+  },
+  {
+    id: 1,
     title: "HỘI THẢO MÁY BAY TP-150",
     date: "28 Tháng 3, 2025",
     image: "/conferenceImages/heroImage.jpg",
     link: "/press/hoi-thao-trien-lam-may-bay-tp150",
   },
   {
-    id: 1,
+    id: 2,
     title: "Khám phá máy bay ‘Make in Vietnam’ tại Triển lãm Quốc phòng 2024",
     date: "17 Tháng 12, 2024",
     image: pic1,
     link: "https://vietnamnet.vn/kham-pha-may-bay-make-in-vietnam-tai-trien-lam-quoc-phong-2024-2353123.html",
   },
   {
-    id: 2,
+    id: 3,
     title:
       "Máy bay huấn luyện sản xuất ở Việt Nam trưng bày tại Triển lãm Quốc phòng",
     date: "18 Tháng 12, 2024",
@@ -37,14 +44,14 @@ const newsData = [
     link: "https://dantri.com.vn/xa-hoi/may-bay-huan-luyen-san-xuat-o-viet-nam-trung-bay-tai-trien-lam-quoc-phong-20241218071145196.htm",
   },
   {
-    id: 3,
+    id: 4,
     title: "Cận cảnh chiếc máy bay đầu tiên sản xuất tại Việt Nam",
     date: "18 Tháng 12, 2024",
     image: pic3,
     link: "https://www.sggp.org.vn/can-canh-chiec-may-bay-dau-tien-san-xuat-tai-viet-nam-post773566.html",
   },
   {
-    id: 4,
+    id: 5,
     title:
       "Triển lãm Quốc phòng quốc tế Việt Nam 2024: “Mục sở thị” máy bay huấn luyện đầu tiên sản xuất tại Việt Nam",
     date: "18 Tháng 12, 2024",
@@ -52,7 +59,7 @@ const newsData = [
     link: "https://www.qdnd.vn/trien-lam-quoc-phong-quoc-te-viet-nam-2024/trien-lam-quoc-phong-quoc-te-viet-nam-2024-muc-so-thi-may-bay-huan-luyen-dau-tien-san-xuat-tai-viet-nam-807653",
   },
   {
-    id: 5,
+    id: 6,
     title:
       "Chuyện về chiếc máy bay huấn luyện và tuần tra lần đầu tiên được sản xuất tại Việt Nam",
     date: "18 Tháng 12, 2024",
@@ -60,7 +67,7 @@ const newsData = [
     link: "https://vovgiaothong.vn/chuyen-ve-chiec-may-bay-huan-luyen-va-tuan-tra-lan-dau-tien-duoc-san-xuat-tai-viet-nam-ema42386.html",
   },
   {
-    id: 6,
+    id: 7,
     title:
       "Cựu sĩ quan Mỹ: Việt Nam ra mắt máy bay huấn luyện có 2 điểm vượt T-6C Mỹ, mở cơ hội quý cho Không quân",
     date: "30 Tháng 12, 2024",
@@ -68,7 +75,7 @@ const newsData = [
     link: "https://soha.vn/cuu-si-quan-my-viet-nam-ra-mat-may-bay-huan-luyen-co-2-diem-vuot-t-6c-my-mo-co-hoi-quy-cho-khong-quan-198241230064409619.htm",
   },
   {
-    id: 7,
+    id: 8,
     title:
       "Mong muốn “góp một viên gạch” vào nền sản xuất máy bay Việt Nam",
     date: "29 Tháng 1, 2025",
