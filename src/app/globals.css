@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Gallery Carousel CSS */
 
 .embla {
@@ -81,11 +80,9 @@
   }
 }
 
-
-
 :root {
   --background-rgb: 255, 255, 255;
-  --background-rgb: 104, 160, 237;;
+  --background-rgb: 104, 160, 237;
 }
 
 body {
@@ -93,7 +90,7 @@ body {
 }
 
 .font-alex-brush {
-  font-family: "Alex Brush", cursive;
+  font-family: var(--font-alex-brush), "Alex Brush", cursive;
 }
 
 .font-bank-gothic {
